@@ -47,8 +47,8 @@ def main():
 def print_tabuleiro(tabuleiro):
     if os.system == 'nt':
             os.system("cls")
-        else:
-            os.system("clear")
+    else:
+        os.system("clear")
     print("\n    A   B   C")
     print("  ╭───┬───┬───╮")
     for i in range(3):
