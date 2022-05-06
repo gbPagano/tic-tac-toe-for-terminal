@@ -6,7 +6,10 @@ def main():
 
     ligar = True
     while ligar == True:
-        os.system("cls")
+        if os.system == 'nt':
+            os.system("cls")
+        else:
+            os.system("clear")
         print("┌","─"*15,"┐""\n│ Jogo da Velha │\n└","─"*15,"┘\n",sep= "")
         tabuleiro = [
             [" "," "," "],
@@ -19,7 +22,10 @@ def main():
             jogador2 = input("Você deseja jogar com 'X' ou 'O'? ").upper().replace(" ","")
         if jogador2 == "X": jogador1 = "O"
         else: jogador1 = "X"
-        os.system("cls")
+        if os.system == 'nt':
+            os.system("cls")
+        else:
+            os.system("clear")
         dificuldade = 0
         while dificuldade < 1 or dificuldade > 2:
             try:                
@@ -39,7 +45,10 @@ def main():
                 ligar = False
 
 def print_tabuleiro(tabuleiro):
-    os.system("cls")
+    if os.system == 'nt':
+            os.system("cls")
+        else:
+            os.system("clear")
     print("\n    A   B   C")
     print("  ╭───┬───┬───╮")
     for i in range(3):
